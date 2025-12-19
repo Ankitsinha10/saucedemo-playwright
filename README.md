@@ -1,0 +1,82 @@
+SauceDemo Playwright Automation Suite
+Automated Quality Assurance Portfolio by Ankit Kumar Sinha
+
+📌 Project Overview
+This repository showcases a robust end-to-end (E2E) testing suite for the SauceDemo application. As a QA Engineer, I designed this suite to demonstrate modern automation practices, including dry code principles, modular test organization, and comprehensive negative testing.
+
+Key Highlights:
+
+Modular Architecture: Utilises test.describe blocks to categorise tests logically.
+Maintainability: Centralised constants for URLs and credentials to ensure easy updates.
+Efficiency: Implemented test.beforeEach hooks to reduce code redundancy.
+Resilience: Used Regex-based assertions for flexible text matching in error messages.
+
+🛠️ Tech Stack:
+
+Framework: Playwright (latest)
+Language: JavaScript (ES6+)
+Test Runner: Playwright Test
+Reporting: Playwright HTML Reporter
+
+🧪 Scenarios Automated
+
+🟢 Positive Scenarios
+
+Logo Verification: Ensuring brand consistency across the landing page.
+Authentication Flow: End-to-end validation of the "Standard User" login journey and redirection to the product dashboard.
+
+🔴 Negative Scenarios (Error Handling)
+
+Empty Field Validation: Verifying system behavior when both credentials are missing.
+Missing Password: Ensuring "Password is required" triggers correctly.
+Missing Username: Ensuring "Username is required" triggers correctly.
+Invalid Credentials: Validating the system correctly rejects unrecognized users with appropriate security messaging.
+
+🚀 Getting Started:
+
+Prerequisites:
+
+Node.js (v16 or higher)
+NPM (comes with Node)
+
+Installation:
+
+Clone the repository:
+
+Bash
+git clone https://github.com/YOUR_USERNAME/your-repo-name.git
+
+Navigate to the project directory:
+
+Bash
+cd your-repo-name
+
+Install dependencies:
+
+Bash:
+
+npm install
+Running Tests
+Run all tests in headless mode:
+
+Bash
+
+npx playwright test
+Run tests in UI Mode (Recommended for debugging):
+
+Bash
+
+npx playwright test --ui
+View HTML Report:
+
+Bash
+
+npx playwright show-report
+🏗️ Project Structure
+Plaintext
+
+├── tests/
+│   └── login.spec.js     # Main test suite with grouped scenarios
+├── playwright.config.js  # Framework configuration
+├── package.json          # Project dependencies
+└── README.md             # Documentation
