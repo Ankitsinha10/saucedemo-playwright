@@ -72,11 +72,22 @@ View HTML Report:
 Bash
 
 npx playwright show-report
-🏗️ Project Structure
-Plaintext
 
-├── tests/
-│   └── login.spec.js     # Main test suite with grouped scenarios
-├── playwright.config.js  # Framework configuration
-├── package.json          # Project dependencies
-└── README.md             # Documentation
+
+## 📊 Test Results
+
+All tests run across 3 browsers:
+- Chromium ✅
+- Firefox ✅
+- WebKit ✅
+
+## 👤 Author
+
+Ankit Kumar Sinha - 
+GitHuB: https://github.com/Ankitsinha10)
+Website: www.ankitkumarsinha.com
+LinkedIn: https://www.linkedin.com/in/ankitsinha07/
+
+## 📝 License
+
+This project is for educational purposes.
