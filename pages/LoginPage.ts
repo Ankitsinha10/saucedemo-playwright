@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test' ;
+import {type Locator, type Page, expect} from '@playwright/test' ;
 
 export class LoginPage {
     //The variables
@@ -51,5 +51,9 @@ export class LoginPage {
 
     async fillPassword(password: string) {
         await this.passwordInput.fill(password);
+    }
+
+    async expectToBeOnLoginPage() {
+        await expect(this.page).toHaveURL(/saucedemo\.com\?$/);
     }
 } 
