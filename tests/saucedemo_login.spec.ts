@@ -42,7 +42,7 @@ test.describe('Negative Login Scenarios', () => {
   test('3. Error message should appear when fields are empty', async({}) => {
 
     await loginPage.clickLogin();
-    await loginPage.expectToBeOnLoginPage
+    await loginPage.expectToBeOnLoginPage()
     await expect(loginPage.errorMessage).toBeVisible();
     await expect(loginPage.errorMessage).toHaveText('Epic sadface: Username is required');
   });
