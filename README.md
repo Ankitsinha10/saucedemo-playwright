@@ -4,12 +4,13 @@ Automated Quality Assurance Portfolio by Ankit Kumar Sinha
 📌 Project Overview
 This repository showcases a robust end-to-end (E2E) testing suite for the SauceDemo application. As a QA Engineer, I designed this suite to demonstrate modern automation practices, including dry code principles, modular test organization, and comprehensive negative testing.
 
-Key Highlights:
+## 🎯 Key Highlights
+- Implements **Page Object Model** for maintainability
+- **Cross-browser** testing ensures compatibility
+- **CI/CD ready** with GitHub Actions integration
+- **Clean code** with TypeScript type safety
+- **Comprehensive coverage** of critical user flows
 
-Modular Architecture: Utilises test.describe blocks to categorise tests logically.
-Maintainability: Centralised constants for URLs and credentials to ensure easy updates.
-Efficiency: Implemented test.beforeEach hooks to reduce code redundancy.
-Resilience: Used Regex-based assertions for flexible text matching in error messages.
 
 🛠️ Tech Stack:
 
