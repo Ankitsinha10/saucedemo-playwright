@@ -39,7 +39,7 @@ test.describe('SauceDemo Login Tests', () => {
 
 test.describe('Negative Login Scenarios', () => {
 
-  test('3. Error message should appear when fields are empty', async({}) => {
+  test('3. Error message should appear when fields are empty', async({page}) => {
 
     await loginPage.clickLogin();
     await loginPage.expectToBeOnLoginPage()

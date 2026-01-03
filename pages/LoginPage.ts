@@ -54,6 +54,7 @@ export class LoginPage {
     }
 
     async expectToBeOnLoginPage() {
-        await expect(this.page).toHaveURL(/saucedemo\.com\?$/);
+        await expect(this.page).toHaveURL(/saucedemo\.com\/?$/);
+;
     }
 } 
