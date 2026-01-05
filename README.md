@@ -1,94 +1,108 @@
-SauceDemo Playwright Automation Suite
-Automated Quality Assurance Portfolio by Ankit Kumar Sinha
+# SauceDemo E2E Test Automation Framework
 
-📌 Project Overview
-This repository showcases a robust end-to-end (E2E) testing suite for the SauceDemo application. As a QA Engineer, I designed this suite to demonstrate modern automation practices, including dry code principles, modular test organization, and comprehensive negative testing.
+[![CI](https://github.com/Ankitsinha10/saucedemo-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/Ankitsinha10/saucedemo-playwright/actions)
+
+> Comprehensive E2E test automation framework for SauceDemo e-commerce platform using Playwright, TypeScript, and Page Object Model architecture with CI/CD integration.
 
 ## 🎯 Key Highlights
-- Implements **Page Object Model** for maintainability
-- **Cross-browser** testing ensures compatibility
-- **CI/CD ready** with GitHub Actions integration
-- **Clean code** with TypeScript type safety
-- **Comprehensive coverage** of critical user flows
 
+- ✅ **Page Object Model (POM)** - Maintainable and scalable architecture
+- ✅ **Cross-Browser Testing** - Chrome, Firefox, Safari
+- ✅ **Secure Credentials** - Environment variables with .env
+- ✅ **CI/CD Pipeline** - GitHub Actions with automated test execution
+- ✅ **20+ Test Scenarios** - Comprehensive coverage of critical user flows
 
-🛠️ Tech Stack:
+## 🛠️ Tech Stack
 
-Framework: Playwright (latest)
-Language: JavaScript (ES6+)
-Test Runner: Playwright Test
-Reporting: Playwright HTML Reporter
+- **Framework:** Playwright v1.40+
+- **Language:** TypeScript
+- **CI/CD:** GitHub Actions
+- **Security:** dotenv for credential management
 
-🧪 Scenarios Automated
+## 📁 Project Structure
+```
+saucedemo-playwright/
+├── pages/              # Page Object Models
+│   ├── LoginPage.ts
+│   └── InventoryPage.ts
+├── tests/              # Test Specifications
+│   ├── saucedemo_login.spec.ts
+│   └── saucedemo_inventory.spec.ts
+├── data/               # Test Data
+│   └── users.json
+├── .env                # Environment Variables (gitignored)
+├── playwright.config.ts
+└── .github/
+    └── workflows/
+        └── playwright.yml
+```
 
-🟢 Positive Scenarios
+## 🧪 Test Coverage
 
-Logo Verification: Ensuring brand consistency across the landing page.
-Authentication Flow: End-to-end validation of the "Standard User" login journey and redirection to the product dashboard.
+### Login Module (10 tests)
+- Valid/invalid credential validation
+- Empty field error handling
+- Locked user scenarios
+- Error message verification
 
-🔴 Negative Scenarios (Error Handling)
+### Inventory & Cart Module (8 tests)
+- Add items to cart
+- Cart badge updates
+- Navigation flows
+- Product display verification
 
-Empty Field Validation: Verifying system behavior when both credentials are missing.
-Missing Password: Ensuring "Password is required" triggers correctly.
-Missing Username: Ensuring "Username is required" triggers correctly.
-Invalid Credentials: Validating the system correctly rejects unrecognized users with appropriate security messaging.
+## 🚀 Getting Started
 
-🚀 Getting Started:
+```bash
+# Clone repository
+git clone https://github.com/Ankitsinha10/saucedemo-playwright.git
 
-Prerequisites:
-
-Node.js (v16 or higher)
-NPM (comes with Node)
-
-Installation:
-
-Clone the repository:
-
-Bash
-git clone https://github.com/YOUR_USERNAME/your-repo-name.git
-
-Navigate to the project directory:
-
-Bash
-cd your-repo-name
-
-Install dependencies:
-
-Bash:
-
+# Install dependencies
 npm install
-Running Tests
-Run all tests in headless mode:
 
-Bash
+# Set up environment variables
+cp .env.example .env
+# Edit .env and add your credentials
 
+# Run tests
 npx playwright test
-Run tests in UI Mode (Recommended for debugging):
 
-Bash
+# Run in headed mode
+npx playwright test --headed
 
-npx playwright test --ui
-View HTML Report:
-
-Bash
-
+# View HTML report
 npx playwright show-report
+```
 
+## 🔐 Security
 
-## 📊 Test Results
+Sensitive credentials are managed via environment variables:
+- `.env` file for local development (gitignored)
+- GitHub Secrets for CI/CD pipeline
+- Separation of test data (JSON) from sensitive credentials
 
-All tests run across 3 browsers:
-- Chromium ✅
-- Firefox ✅
-- WebKit ✅
+## 📊 CI/CD
+
+Automated testing via GitHub Actions:
+- Runs on every push and pull request
+- Cross-browser test execution
+- Automatic report generation
+- Failure notifications
 
 ## 👤 Author
 
-Ankit Kumar Sinha - 
-GitHuB: https://github.com/Ankitsinha10)
-Website: www.ankitkumarsinha.com
-LinkedIn: https://www.linkedin.com/in/ankitsinha07/
+**Ankit Kumar Sinha**  
+QA Engineer | Test Automation Specialist
+
+- 🔗 [LinkedIn](https://linkedin.com/in/ankitsinha07)
+- 🐙 [GitHub](https://github.com/Ankitsinha10)
+- 📧 ankitkumarsinha05@gmail.com
+- 🌐 [Portfolio](https://www.ankitkumarsinha.com)
 
 ## 📝 License
 
-This project is for educational purposes.
+This project is for educational and portfolio purposes.
+
+---
+
+**Built with ❤️ using Playwright + TypeScript**
