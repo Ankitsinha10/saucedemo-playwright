@@ -1,0 +1,11 @@
+{
+  "standard": {
+    "username": "standard_user"
+  },
+  "locked": {
+    "username": "locked_out_user"
+  },
+  "problem": {
+    "username": "problem_user"
+  }
+}

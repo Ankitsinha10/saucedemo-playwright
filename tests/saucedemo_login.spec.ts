@@ -1,8 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage} from '../pages/LoginPage' ;
 
-const USERNAME = 'standard_user';
-const PASSWORD = 'secret_sauce';
+//Import the Data
+import * as users from '../data/users.json' ;
+
+//password variable
+
+const PASSWORD = process.env.SAUCE_PASSWORD || '';
+const USERNAME = users.standard.username ;
 
 test.describe('SauceDemo Login Tests', () => {
 

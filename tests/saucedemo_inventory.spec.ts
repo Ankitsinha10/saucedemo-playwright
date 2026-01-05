@@ -4,8 +4,8 @@ import {test, expect} from '@playwright/test';
 import {LoginPage} from '../pages/LoginPage'
 import { InventoryPage } from '../pages/InventoryPage'; 
 
-const USERNAME = 'standard_user' ;
-const PASSWORD = 'secret_sauce' ;
+//Import JSON DATA
+import * as users from '../data/users.json';
 
 test.describe('Add to Cart Scenario', () => {
 
@@ -24,9 +24,18 @@ test.describe('Add to Cart Scenario', () => {
 
         //Perform the login (Prerequiste)
         await loginPage.goto()
-        console.log("User is at the homepage currently")
+        console.log("User is at the login page currently")
 
-        await loginPage.login(USERNAME, PASSWORD);
+
+        //THE HYBRID LOGIN
+        //Username comes from JSON (userData.standard.username)
+        //Password comes from ENV (process.env.SAUCE_PASSWORD)
+
+
+
+        const password = process.env.SAUCE_PASSWORD || '';
+
+        await loginPage.login(users.standard.username, password);
         console.log("The user has successfully logged in")
 
     });
